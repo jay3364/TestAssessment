@@ -1,0 +1,10 @@
+<template>
+    <lightning-card variant="base" title="Feedback">
+        <template if:false={isflow}>
+        <lightning-button variant="base" label="Feedback" onclick={handleFeedback}>
+        </lightning-button>
+    </template>
+        <lightning-flow flow-api-name={flowName} if:true={isflow}>
+        </lightning-flow>
+    </lightning-card>
+</template>

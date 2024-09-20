@@ -1,0 +1,17 @@
+<template>
+    <lightning-card variant="base">
+        <lightning-record-edit-form record-id={recordId} object-api-name="Feedback__c"
+            onsuccess={handleSuccess} onsubmit={handleSubmit}>
+            <lightning-messages></lightning-messages>
+
+            <lightning-output-field field-name="Name"></lightning-output-field>
+            <lightning-output-field field-name="Email_Address__c"></lightning-output-field>
+            <lightning-output-field field-name="Phone_Number__c"></lightning-output-field>
+            <lightning-input-field field-name="Category__c" required onchange={getCategory}></lightning-input-field>
+            <lightning-input-field field-name="Message__c" required onchange={getMessage}></lightning-input-field>
+            <lightning-input-field field-name="Contact__c" onchange={getContact}></lightning-input-field>
+
+            <lightning-button class="slds-m-top_small" variant="brand" type="submit" name="update" label="Send"></lightning-button>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>
